@@ -2,13 +2,16 @@ const http = require('http');
 const fs =require('fs');
 const minimist = require('minimst');
 
-//const argv = minimist(process.argv.slice(2));
+const argv = mini(process.argv.slice(2));
 
-const port = process.env.port || 3000;
+const port = argv.port || 3000;
 
-fs.readFile('./public/index.html', (err, data) => {
+const hostname = '127.0.0.1';
+
+fs.readFile('./public/index.html', utf-8, (err, data) => {
     if (err) {
-        console.err();
+        console.error(err);
+        return;
     }
 
     const server = http.createServer((req, res) => {
@@ -16,8 +19,8 @@ fs.readFile('./public/index.html', (err, data) => {
         res.end(data);
     })
 
-    server.listen(port, () => {
-        console.log('Server listening on port ${port}');
+    server.listen(port, hostname, () => {
+        console.log('Server listening on port ${port} at https://${hostname}:${port}/');
       });
    
 });
