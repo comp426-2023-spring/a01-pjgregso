@@ -1,19 +1,18 @@
 {
-  "name": "lamar-server",
-  "version": "1.0.0",
-  "description": "a web server for lamar jackson",
+  "name": "lamarserver2",
+  "version": "0.0.1",
+  "description": "a package containing a simple web server",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js --port=5555",
-    "start": "node server.js"
+    "test": "node server.js --port=5555"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/comp426-2023-spring/a01-pjgregso.git"
   },
   "keywords": [
-    "web",
-    "server"
+    "server",
+    "web"
   ],
   "author": "@pjgregso",
   "license": "GPL-3.0-or-later",
