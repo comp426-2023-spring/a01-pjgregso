@@ -8,19 +8,17 @@ const port = argv.port || 3000;
 
 const hostname = '127.0.0.1';
 
-fs.readFile('./public/index.html', utf-8, (err, data) => {
+fs.readFile('./public/index.html', 'utf8', (err, data) => {
     if (err) {
-        console.error(err);
-        return;
+      console.error(err);
+      return;
     }
-
     const server = http.createServer((req, res) => {
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        res.end(data);
-    })
-
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/html');
+      res.end(data)
+    });
     server.listen(port, hostname, () => {
-        console.log('Server listening on port ${port} at https://${hostname}:${port}/');
-      });
-   
-});
+      console.log(`Server listening on port ${port} http://${hostname}:${port}/ `);
+    });
+  });
