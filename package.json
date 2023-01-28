@@ -4,7 +4,8 @@
   "description": "a web server for lamar jackson",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js --port=5555"
+    "test": "node server.js --port=5555",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,12 +16,13 @@
     "server"
   ],
   "author": "@pjgregso",
-  "license": "AGPL-3.0-or-later",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/comp426-2023-spring/a01-pjgregso/issues"
   },
   "homepage": "https://github.com/comp426-2023-spring/a01-pjgregso#readme",
   "dependencies": {
     "minimist": "^1.2.7"
-  }
+  },
+  "devDependencies": {}
 }
